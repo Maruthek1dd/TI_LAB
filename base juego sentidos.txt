@@ -1,0 +1,7 @@
+aparece una imagen(importar)
+dar opcion de respuestas(definilo al inicio)
+hacer whiles para justificar los errores(poner output de error)
+reinicie(con lo mismo?)
+si la respuesta es correcta, seguir a siguiente sentidos
+utilizamos los 5 sentidos pa juego
+---------------------------------------------------------------
