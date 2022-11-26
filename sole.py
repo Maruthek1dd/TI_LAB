@@ -64,6 +64,3 @@ while resultado == 1:
         resultado = 2
         print("Perdiste...") #cuando se deja de iterar el ciclo while (mientras) se muestra el mensaje de perdida en el juego
         exec(open("menu.py").read())
-
-
-

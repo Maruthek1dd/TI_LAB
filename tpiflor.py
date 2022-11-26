@@ -18,13 +18,13 @@ while acepta != "si" and acepta != "no":
     acepta = acepta.lower()
 # si decidio quedarse continuamos explicando el juego
 # le damos a elegir la modalidad, cada modalidad tiene un texto diferente
-while acepta == "si":
+if acepta == "si":
     modalidad = int(input("elije la modalidad 1 facil, 2 dificil"))
     while modalidad != 1 and modalidad != 2:
         modalidad = int(input("eso no es correcto por favor ingresa: 1 para Facil o 2 para dificil"))
         # modalidad facil
     while modalidad == 1:
-        print("Memoriza el sig texto, tienes unos segundos: ", texto1)
+        print("Memoriza el siguiente texto, tienes unos segundos: ", texto1)
     # con la funcion time. sleep le damos 20seg para que el texto aparezca en pantalla y luego lo borramos
         time.sleep(10)
     # con la funcion os.sistem(cls) hacemos que se borre la pantalla
@@ -39,12 +39,14 @@ while acepta == "si":
         if textoingreso == texto1:
             print("¡¡¡Perfecto lo lograste!!!")
             time.sleep(2)
+            modalidad = 3
         elif contador == 0 :
             print("lo sentimos perdiste...¡pero puede volver a jugar!")
-        break
+            modalidad = int(3)
+
 # modalidad dificil, volvemos a hacer lo mismo que antes
-    while modalidad == 2:
-        print("Memoriza el sig texto, tienes un minuto: ", texto2)
+    if modalidad == 2:
+        print("Memoriza el siguiente texto, tienes un minuto: ", texto2)
         time.sleep(10)
         os.system("cls")
         textoingreso = str(input("ahora es tu turno escribe la frase correctamente, tienes 3 intentos"))
@@ -54,10 +56,13 @@ while acepta == "si":
         if textoingreso.lower() == texto2:
             print("¡¡¡Perfecto lo lograste!!!")
             time.sleep(2)
+            modalidad = 3
         elif contador == 0 :
             print("lo sentimos perdiste...¡pero puede volver a jugar!")
+            modalidad = 3
             time.sleep(2)
-        break
-    break
-exec(open("menu.py").read())
+    elif modalidad == 3 :
+        exec(open("menu.py").read())
+if acepta == "no":
+    exec(open("menu.py").read())
 # finaliza el juego

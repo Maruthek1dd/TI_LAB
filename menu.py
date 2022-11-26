@@ -40,32 +40,21 @@ def menu_principal():
     print(f"Hola! {nombre} vamos a jugar? ")
     time.sleep(2)
     generar_menu(opciones, '4')
-    
-
-
 def accion1():
     print('Has elegido el juego Memotest!')
     exec(open("tpiflor.py").read())
-
-
 def accion2():
     print('Has elegido el juego ConSenti2!')
     exec(open("sopadeletras7.py").read())
-    
 
 def accion3():
     print('Has elegido el juego OrdenMatematico!')
-    exec(open("ejeciciojuegosole.py").read())
-    
+    exec(open("sole.py").read())
 def accion4():
     print('Has elegido el juego Select The W_rd')
     exec(open("juegoyeiyei.py").read())
-
-
 def salir():
     print('Saliendo')
-
-
-
 if __name__ == '__main__':
     menu_principal()
+

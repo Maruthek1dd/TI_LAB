@@ -37,7 +37,6 @@ while acepta == "NO":
     elif salir == 2:
         break
 
-
 for i in range(1):
     for k in range(10):
             matriz.append(sopa)
@@ -45,13 +44,9 @@ for i in range(1):
 c+=str(b +'\t')
 # SEGUNDA MATRIZ
 print(" ¡Bienvenido a la sopa de letras!\n")
-print("El objetivo es encontrar 5 palabras  relacionadas a los 5 sentidos que tenemos, vamos!!!  ") # CONSIGNA 
-
+print("El objetivo es encontrar 5 palabras  relacionadas a los 5 sentidos que tenemos, vamos!!!  ") # CONSIGNA
 time.sleep(3)
-
 print(c,'\n') # SE MUESTRA EN PANTALLA LA MATRIZ
-
-
 
 while cont<=4:
     RTA=str(input("que palabra encontraste?: ")) 
@@ -61,13 +56,9 @@ while cont<=4:
         cont+=1
     else:print("repuesta incorrecta, intenta de nuevo: ")
 # CICLO QUE NOS PERMITE ENTRAR LAS RESPUESTAS Y SABER SI ESTAN CORRECTAS O NO
-
-if cont==5:
+if cont == 5:
     print("FELICITACIONES GANASTE")
-
-
 time.sleep(3)
 os.system("cls")
-    
-    
+
 exec(open("menu.py").read())
