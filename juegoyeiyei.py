@@ -4,8 +4,9 @@ import time
 cont = 0 # contador
 palabras = ["RED", "BLACK", "CARDS", "HOUSE", "YELLOW", "SEVEN", "DOG", "ONE"]
 print("hello ")
-print("welcome Player, al juego de encontrar la  palabras oculta!")
+print("welcome Player, al juego de encontrar las  palabras ocultas!")
 print("adivina la palabra que se ve por pantalla  utilizando el lenguaje de ingles")
+print("si en algun momento quieres retirarte solo presiona 1")
 print("te encuentras Ready?")
 print("start!!")
 while cont <= 3:
@@ -17,18 +18,17 @@ while cont <= 3:
     completar = n * " _ "
     pista = letrapri + completar + letraUlt
     print(pista)
-
     palabraUsuario = input("te animas a encontrar esta palabra: ")
     palabraUsuario = palabraUsuario.upper()
     # cond=palabraUsuario == word
     if (palabraUsuario == word):
         cont += 1
         print("VERY GOOOD!")
-    else:
-        (palabraUsuario != word)
-        print("TRY AGAIN! ")
-        cont == cont
-
+    if (palabraUsuario != word and palabraUsuario != "1"):
+        print("TRY AGAIN!")
+    if (palabraUsuario == "1"):
+        print("volviendo al menu")
+        cont = 5
 if cont == 4:
     print("CONGRATULATION YOU WIN!")
 

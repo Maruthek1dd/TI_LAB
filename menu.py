@@ -55,6 +55,7 @@ def accion4():
     exec(open("juegoyeiyei.py").read())
 def salir():
     print('Saliendo')
+
 if __name__ == '__main__':
     menu_principal()
 

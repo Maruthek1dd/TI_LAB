@@ -21,6 +21,7 @@ while resultado == 1:
             resultado = 1
         else:
             resultado=2
+            print("perdiste...")  # cuando se deja de iterar el ciclo while (mientras) se muestra el mensaje de perdida en el juego
 
     if level==2:
         num1=random.randrange(1500) #el numero va desde el rango [0;1500]
@@ -38,6 +39,7 @@ while resultado == 1:
                 resultado=1
         else:
             resultado=2
+            print("perdiste...")  # cuando se deja de iterar el ciclo while (mientras) se muestra el mensaje de perdida en el juego
     if level==3:
         num1=random.randrange(10000) #el numero va desde el rango [0;10000]
         num2=random.randrange(10000)
@@ -60,7 +62,4 @@ while resultado == 1:
                     if useresult4==correctresult4: #comprobacion de la cuarta operacion
                         print("Correcto! Sigues participando del juego!") #si todo es OK, entonces se continua
                         resultado=1
-    else:
-        resultado = 2
-        print("Perdiste...") #cuando se deja de iterar el ciclo while (mientras) se muestra el mensaje de perdida en el juego
-        exec(open("menu.py").read())
+exec(open("menu.py").read())
